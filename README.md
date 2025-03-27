@@ -1,5 +1,7 @@
 # Claude Code Plugin for JetBrains IDEs
 
+> **DISCLAIMER:** This project is currently under development and may not be fully stable.
+
 A JetBrains IDE plugin that integrates Claude Code, allowing you to run Claude Code AI assistant directly within your IDE.
 
 ## Features
@@ -51,6 +53,22 @@ This will create a plugin zip file in `build/distributions`.
 ```bash
 ./gradlew runIde
 ```
+
+## Contributors
+
+Contributions to this project are welcome! However, all code will be reviewed and accepted only by the repository owner. When your contribution is accepted, your name and image will be displayed in this section.
+
+### How to Contribute
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## About Claude Code
+
+This plugin was developed with assistance from [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview), Anthropic's command-line interface for Claude. Claude Code provides AI assistance for software development tasks directly in your terminal.
 
 ## License
 
