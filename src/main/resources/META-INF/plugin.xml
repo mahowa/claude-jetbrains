@@ -1,0 +1,31 @@
+<idea-plugin>
+    <id>com.anthropic.claude.plugin</id>
+    <name>Claude Code</name>
+    <vendor email="support@anthropic.com" url="https://anthropic.com">Anthropic</vendor>
+
+    <description><![CDATA[
+    Claude Code integration for JetBrains IDEs.
+    Run Claude Code directly within your IDE and view code changes using the built-in diff tool.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Claude Code" secondary="true" icon="/icons/claude_icon.svg" anchor="right"
+                    factoryClass="com.anthropic.claude.plugin.ui.ClaudeToolWindowFactory"/>
+        <applicationConfigurable parentId="tools" instance="com.anthropic.claude.plugin.settings.ClaudeSettingsConfigurable"
+                             id="com.anthropic.claude.plugin.settings.ClaudeSettingsConfigurable"
+                             displayName="Claude Code"/>
+        <applicationService serviceImplementation="com.anthropic.claude.plugin.settings.ClaudeSettings"/>
+    </extensions>
+
+    <actions>
+        <action id="com.anthropic.claude.plugin.actions.AskClaudeAction" 
+                class="com.anthropic.claude.plugin.actions.AskClaudeAction" 
+                text="Ask Claude Code" 
+                description="Ask Claude Code about selected code">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift C"/>
+        </action>
+    </actions>
+</idea-plugin>
